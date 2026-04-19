@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --color-btw-yellow: #FFC300;
+  --color-btw-yellow-alt: #FACC15;
+  --color-btw-black: #000000;
+  --color-btw-dark: #1A1A1A;
+  --color-btw-gray: #333333;
+  --font-family-display: 'Teko', sans-serif;
+  --font-family-body: 'Montserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000;
+  color: #FFFFFF;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* Responsive utilities */
+@media (min-width: 640px) {
+  .sm\:flex-row {
+    flex-direction: row !important;
+  }
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none !important;
+  }
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .md\:flex-row {
+    flex-direction: row !important;
+  }
+  .md\:justify-between {
+    justify-content: space-between !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex !important;
+  }
+  .lg\:block {
+    display: block !important;
+  }
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .lg\:flex-1 {
+    flex: 1 1 0% !important;
+  }
+  .lg\:justify-center {
+    justify-content: center !important;
+  }
+  .lg\:px-8 {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Selection */
+::selection {
+  background-color: #FFC300;
+  color: #000000;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFC300;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FACC15;
+}
